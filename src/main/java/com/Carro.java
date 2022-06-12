@@ -5,19 +5,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Data;
-
 @Entity
-@Data
 public class Carro {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    
+
     long id;
     String marca;
     String modelo;
     Integer ano;
-
 
     public long getId() {
         return this.id;
@@ -62,6 +58,5 @@ public class Carro {
     public String toString() {
         return "Carro [ano=" + ano + ", id=" + id + ", marca=" + marca + ", modelo=" + modelo + "]";
     }
-    
 
 }
